@@ -38,3 +38,59 @@ id 使用小寫英文與連字號且不得重複。分類限定聚落建築、�
 python scripts/build.py；python scripts/check.py。
 本機可直接開 dist/index.html，或 python -m http.server 8000 --directory dist。
 GitHub Pages 發布：將 dist 裡的內容放到新倉庫根目錄，開啟 main / (root)；同時上傳本規則、content、scripts、templates 與 README 供後續維護。請勿聲稱未建立的 GitHub 網址已可用。
+
+## 景點欄位對照
+
+所有欄位均必填。除 highlights 為字串陣列外，其餘欄位都是字串。
+
+| 欄位 | 用途與限制 |
+| --- | --- |
+| id | 唯一英文代號，例如 shuitou-village；會成為詳細頁檔名 |
+| name | 繁體中文景點名稱 |
+| english | 英文名稱，供卡片顯示與搜尋 |
+| category | 既定四類之一；新增分類時需同步修改產生器、檢查程式與首頁範本的分類數 |
+| town | 景點所在鄉鎮，不猜測行政區 |
+| summary | 55 個字元以內的卡片簡介，以現有檢查程式的 len 計算為準 |
+| intro | 經查證後自行撰寫的景點介紹，不直接抄錄完整原文 |
+| highlights | 恰好三項可觀察的特色，不使用無依據的排名或評分 |
+| tips | 參觀提醒；不將未查證的即時資訊寫成確定事實 |
+| source | 官方來源完整 HTTPS 網址；現有檢查要求 https://kinmen.travel/ 開頭 |
+| art | 插畫檔名，不含 .svg；對應 dist/assets/<art>.svg |
+
+目前可沿用的 art：tower、village、tunnel、lake、street。若沿用意象插畫，替代文字與說明仍須標明是示意。
+
+## 哪裡應該修改
+
+| 任務 | 修改位置 | 後續動作 |
+| --- | --- | --- |
+| 修改景點文字或新增景點 | content/places.json | 重新產生並檢查網站 |
+| 修改首頁結構 | templates/index.html | 重新產生首頁 |
+| 修改所有景點頁結構 | templates/detail.html | 重新產生全部介紹頁 |
+| 修改顏色、字體、間距與版面 | dist/assets/style.css | 檢查首頁及介紹頁 |
+| 修改搜尋與分類 | dist/assets/app.js | 驗證組合篩選與空結果 |
+| 修改卡片結構或生成規則 | scripts/build.py | 重新產生全部頁面並檢查 |
+
+內容與範本是 HTML 的來源；不要只改 dist/index.html 或 dist/places/*.html，否則下次生成會被覆蓋。
+目前產生器不會清除已刪除景點的舊 HTML。若使用者要求移除景點，應檢查其對應頁面與連結，僅移除該景點的過時產物，不清空整個 dist。
+
+## 完成定義
+
+- 新景點出現在首頁，點擊可開啟自己的介紹頁。
+- 中文名稱、英文名稱、鄉鎮可搜尋到該景點。
+- 分類與搜尋採交集：必須同時符合選定分類及關鍵字。
+- 「清除篩選」清空關鍵字並恢復全部景點；結果數與可見卡片一致。
+- 不符合任何景點時顯示明確提示，不留下空白畫面。
+- 介紹頁包含景點介紹、三項特色、提醒、官方來源與返回連結。
+- Python 產生與檢查命令成功；未執行的檢查不得宣稱通過。
+- 桌面與手機版面需分別檢查；尚未測試手機時明確記錄限制。
+- README 的功能清單、NOTES 的現況及 CHANGELOG 的變更與實作一致。
+
+## 交接與回報
+
+完成工作時列出：修改的檔案、使用的資料來源、實際執行的檢查、未完成項目。NOTES.md 記目前狀態與下一步；CHANGELOG.md 記已完成的變更與原因，不虛構歷史工作紀錄。
+
+上傳 GitHub 時將本檔命名為 AGENTS.md，放在與 README.md、content、scripts、templates 同層的專案根目錄。網站使用者不需要 AI 工具也能正常瀏覽；這份文件是提供給開發者與 AI 的規則，不是網站執行所需的程式。
+
+## 可直接交給 AI 的延伸指令
+
+> 請先閱讀 AGENTS.md、README.md、NOTES.md 與 content/places.json。依照現有規則新增一個尚未收錄的金門景點：先查證官方資料，補齊所有欄位，沿用合適的意象插畫或新增原創 SVG，重新生成首頁與介紹頁，驗證分類、搜尋、返回連結及空結果處理，最後更新 NOTES.md、CHANGELOG.md 並回報實際檢查結果。
