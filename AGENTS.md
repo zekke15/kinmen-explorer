@@ -85,12 +85,3 @@ GitHub Pages 發布：將 dist 裡的內容放到新倉庫根目錄，開啟 mai
 - 桌面與手機版面需分別檢查；尚未測試手機時明確記錄限制。
 - README 的功能清單、NOTES 的現況及 CHANGELOG 的變更與實作一致。
 
-## 交接與回報
-
-完成工作時列出：修改的檔案、使用的資料來源、實際執行的檢查、未完成項目。NOTES.md 記目前狀態與下一步；CHANGELOG.md 記已完成的變更與原因，不虛構歷史工作紀錄。
-
-上傳 GitHub 時將本檔命名為 AGENTS.md，放在與 README.md、content、scripts、templates 同層的專案根目錄。網站使用者不需要 AI 工具也能正常瀏覽；這份文件是提供給開發者與 AI 的規則，不是網站執行所需的程式。
-
-## 可直接交給 AI 的延伸指令
-
-> 請先閱讀 AGENTS.md、README.md、NOTES.md 與 content/places.json。依照現有規則新增一個尚未收錄的金門景點：先查證官方資料，補齊所有欄位，沿用合適的意象插畫或新增原創 SVG，重新生成首頁與介紹頁，驗證分類、搜尋、返回連結及空結果處理，最後更新 NOTES.md、CHANGELOG.md 並回報實際檢查結果。
