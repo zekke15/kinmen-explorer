@@ -1,0 +1,4 @@
+'use strict';
+const input=document.querySelector('#search'),buttons=[...document.querySelectorAll('[data-category]')],cards=[...document.querySelectorAll('[data-place]')];let category='全部景點';
+function render(){const q=input.value.trim().toLocaleLowerCase();let count=0;cards.forEach(card=>{card.hidden=!((category==='全部景點'||card.dataset.kind===category)&&card.dataset.search.toLocaleLowerCase().includes(q));if(!card.hidden)count++;});document.querySelector('#count').textContent='顯示 '+count+' 個景點';document.querySelector('#empty').hidden=count!==0;buttons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.category===category)));}
+input.addEventListener('input',render);buttons.forEach(b=>b.addEventListener('click',()=>{category=b.dataset.category;render();}));document.querySelector('#clear').addEventListener('click',()=>{input.value='';category='全部景點';render();input.focus();});render();

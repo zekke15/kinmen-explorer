@@ -1,0 +1,104 @@
+[
+  {
+    "id": "juguang-tower",
+    "name": "莒光樓",
+    "english": "Juguang Tower",
+    "category": "聚落建築",
+    "town": "金城鎮",
+    "summary": "從經典城樓出發，讀懂金門的第一個印象。",
+    "intro": "莒光樓將傳統城樓造型與現代建築基座結合，是認識金門的重要地標。把腳步放慢，從建築輪廓、周邊景觀與展示內容，逐步理解這座島嶼。",
+    "highlights": [
+      "觀察城樓與基座不同的建築語彙",
+      "留意屋簷、柱列與立面比例",
+      "透過展覽認識地方民俗與文化"
+    ],
+    "tips": "展區開放與參觀資訊請以官方公告為準。",
+    "source": "https://kinmen.travel/zh-tw/travel/attraction/389",
+    "art": "tower"
+  },
+  {
+    "id": "shuitou-village",
+    "name": "水頭聚落",
+    "english": "Shuitou Village",
+    "category": "聚落建築",
+    "town": "金城鎮",
+    "summary": "沿著古厝與洋樓，走進金門的僑鄉故事。",
+    "intro": "水頭聚落保存閩南建築與洋樓風貌，得月樓、金水國小及僑鄉文化展示館各具特色。行走其間，可以從不同建築樣式讀到地方與海外交流的痕跡。",
+    "highlights": [
+      "比較閩南古厝與洋樓的立面",
+      "留意得月樓的建築輪廓",
+      "循金水國小認識僑鄉文化"
+    ],
+    "tips": "聚落仍有居民生活，請尊重私人空間；進入展示館前查看現場規定。",
+    "source": "https://kinmen.travel/zh-tw/travel/attraction/520",
+    "art": "village"
+  },
+  {
+    "id": "zhaishan-tunnel",
+    "name": "翟山坑道",
+    "english": "Zhaishan Tunnel",
+    "category": "戰地歷史",
+    "town": "金城鎮",
+    "summary": "穿過岩壁與水道，看見島嶼另一層歷史。",
+    "intro": "翟山坑道由坑道與水道構成，原為軍事運補設施。岩壁、昏暗光線與水面共同呈現特殊空間，讓人從工程尺度感受金門的戰地歷史。",
+    "highlights": [
+      "觀察岩壁的人工開鑿痕跡",
+      "比較陸上通道與水道的空間",
+      "留意水面與岩壁的光影關係"
+    ],
+    "tips": "依現場開放動線參觀，注意階梯與濕滑處；不要跨越圍欄。",
+    "source": "https://kinmen.travel/zh-cn/travel/attraction/1337",
+    "art": "tunnel"
+  },
+  {
+    "id": "shuangli-lake",
+    "name": "雙鯉湖",
+    "english": "Shuangli Lake",
+    "category": "自然風景",
+    "town": "金寧鄉",
+    "summary": "把行程留一點空白，聽見湖畔的風與鳥聲。",
+    "intro": "雙鯉湖位於古寧頭一帶，湖畔景觀結合聚落與濕地生態。周邊賞鳥步道與雙鯉濕地自然中心，提供認識金門自然環境的不同方式。",
+    "highlights": [
+      "觀察湖面與古厝倒影",
+      "沿步道安靜觀察水鳥",
+      "透過濕地展示認識地方生態"
+    ],
+    "tips": "鳥類出現情形隨季節與天候不同；保持距離、不餵食，出發前確認中心開放資訊。",
+    "source": "https://kinmen.travel/zh-tw/travel/attraction/509",
+    "art": "lake"
+  },
+  {
+    "id": "shanhou-village",
+    "name": "山后民俗文化村",
+    "english": "Shanhou Folk Culture Village",
+    "category": "聚落建築",
+    "town": "金沙鎮",
+    "summary": "在整齊古厝之間，發現閩南聚落的生活秩序。",
+    "intro": "山后民俗文化村由傳統宅第、學堂與宗祠構成，合稱「十八間」。建築群的排列與細節，適合慢慢觀察閩南聚落的空間組織。",
+    "highlights": [
+      "觀察古厝之間的整體排列",
+      "辨識宅第、學堂與宗祠的角色",
+      "留意屋脊、磚牆與門窗細節"
+    ],
+    "tips": "不要擅入未開放建築，拍攝居民或私人空間前先取得同意。",
+    "source": "https://kinmen.travel/zh-tw/travel/attraction/517",
+    "art": "village"
+  },
+  {
+    "id": "shamei-street",
+    "name": "沙美老街",
+    "english": "Shamei Old Street",
+    "category": "街區漫步",
+    "town": "金沙鎮",
+    "summary": "沿著街角與店鋪，把旅行走成日常。",
+    "intro": "沙美是金沙鎮的重要商圈之一。老街周邊聚集店家與傳統小吃，適合用散步的速度觀察街區紋理，認識聚落之外的金門生活。",
+    "highlights": [
+      "觀察街道與店鋪相連的尺度",
+      "留意老街周邊的日常生活",
+      "從傳統糕餅與小吃認識地方飲食"
+    ],
+    "tips": "店家營業情形各異，請依現場公告安排；勿把示意路線當作即時導航。",
+    "source": "https://kinmen.travel/zh-tw/discover/commercial-district",
+    "art": "street"
+  }
+]

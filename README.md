@@ -1,0 +1,36 @@
+# 金門慢遊 Kinmen Notes
+
+全新的金門景點介紹專案，參考使用者提供的 CS Note 版型，採用淺色、青綠、雙欄介紹與景點卡片。未修改 kinmen-explorer 或 cs-note。
+
+## 功能
+- 六個景點、四種分類；分類與中英文搜尋可組合，提供計數、零結果與清除。
+- 六個獨立詳細頁、三個觀察重點、到訪提醒、官方資料來源、相關景點。
+- 原創 SVG 意象插畫（不是景點照片），不依賴外部圖片或字體。
+- 響應式排版與鍵盤焦點；關閉 JS 仍可透過卡片看詳細頁。
+
+## 開啟
+直接開 dist/index.html，或在專案根目錄執行：
+
+```sh
+python -m http.server 8000 --directory dist
+```
+
+## 修改與新增
+先讀 AGENTS.md。只要在 content/places.json 增加完整景點，再執行：
+
+```sh
+python scripts/build.py
+python scripts/check.py
+```
+
+程式會更新首頁卡片、景點數、詳細頁與相關景點。資料欄位、命名、內容格式與驗收標準由 AGENTS.md 管理，具有重複使用性。
+
+示範指令：請依 AGENTS.md 新增一個經官方來源查證的景點，在 places.json 補足所有欄位，沿用既有插畫，重新生成網站，檢查新景點可被分類和搜尋找到，更新 NOTES.md。
+
+## GitHub Pages
+本專案尚未建立新的 GitHub 倉庫。建議名稱 kinmen-notes。建立後將 dist 裡的 index.html、assets、places 放到倉庫根目錄，另外上傳 AGENTS.md、README.md、content、scripts、templates。保留 dist 原始內容，以便重新生成。
+Settings → Pages → Deploy from a branch → main → /(root)。後續重新生成時，同步把 dist 內容複製到倉庫根目錄再提交。
+不要將 ZIP 本身當作網站上傳。
+
+## 資料與素材
+景點資料來源附在每個 detail 頁。內容以官方基本介紹為基礎重新撰寫，不含即時票價與營業時間。插畫為自行繪製的 SVG 意象。網站由 AI 協助製作，提交前請自行操作並理解規則。
